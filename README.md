@@ -17,8 +17,8 @@ _______________________________________
 -	Fue utilizada por el ransomware WannaCry y NotPetya.
 _______________________________________
 ## 🧰 Requisitos del entorno de pruebas
--	💻 Kali Linux (atacante) con Metasploit instalado.
--	🧱 Máquina vulnerable: Windows 7 SP1 o Windows Server 2008 sin el parche MS17-010.
+-	💻 Kali Linux (máquina atacante). https://www.kali.org/get-kali/#kali-platforms
+-	🧱  [Máquina vulnerable: Windows 7 SP1 o Windows Server 2008 sin el parche MS17-010.](https://drive.google.com/file/d/11f_wsW59Dh1fGvQCNUPK70lIWzlcg44_/view)
 -	🌐 Ambas máquinas deben estar en la misma red local o virtual interna.
 ________________________________________
 ## 🧪 Paso a paso para explotar MS17-010 con Metasploit
@@ -27,7 +27,7 @@ ________________________________________
 Desde Kali:
 <pre> ping [IP_de_la_víctima] </pre>
 Opcional (para verificar si es vulnerable):
-<pre> nmap -p 445 --script smb-vuln-ms17-010 <IP_víctima> </pre>
+<pre> nmap -p 445 --script smb-vuln-ms17-010 [IP_víctima] </pre>
 Si dice VULNERABLE, puedes continuar.
 ________________________________________
 **🔹 2. Iniciar Metasploit**
@@ -85,14 +85,13 @@ ________________________________________
 -	No usar este exploit en redes reales o con máquinas no autorizadas.
 -	EternalBlue afecta SMBv1, un protocolo antiguo y obsoleto.
 ________________________________________
-## ❌ **Problemas comunes**
-- Exploit dice "No session created"	Verifica que la víctima sea vulnerable (sin parche KB4012212 o similar)
+## ❌ **Consejos adicionales**
+
+- Para verificar si el Windows 7 es vulnerable: ```bash nmap -p 445 --script smb-vuln-ms08-067 [IP_víctima] ```
+- Si el Exploit dice "No session created"	Verifica que la víctima sea vulnerable (sin parche KB4012212 o similar)
 - LHOST mal configurado	Usa la IP correcta de tu Kali, no 127.0.0.1 ni una IP de otra red
 - Antivirus bloquea el payload	Desactívalo (solo en laboratorio)
 - Máquina víctima no usa SMBv1	Actívalo o usa una VM XP/7 sin actualizar
-________________________________________
-## 🧱 **¿Dónde conseguir una máquina vulnerable?**
--	[Windows 7 SP1 sin actualizar y con SMBv1 activado](https://drive.google.com/file/d/11f_wsW59Dh1fGvQCNUPK70lIWzlcg44_/view)
 ________________________________________
 ## 📚 **Recursos**
 - [Exploit-DB: MS17-010](https://www.exploit-db.com/exploits/42315)
