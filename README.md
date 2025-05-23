@@ -17,8 +17,8 @@ _______________________________________
 -	Fue utilizada por el ransomware WannaCry y NotPetya.
 _______________________________________
 ## 🧰 Requisitos del entorno de pruebas
--	💻 Kali Linux (máquina atacante). https://www.kali.org/get-kali/#kali-platforms
--	🧱  [Máquina vulnerable: Windows 7 SP1 o Windows Server 2008 sin el parche MS17-010.](https://drive.google.com/file/d/11f_wsW59Dh1fGvQCNUPK70lIWzlcg44_/view)
+-	💻 [Kali Linux (máquina atacante)](https://www.kali.org/get-kali/#kali-platforms)
+-	🧱 [Máquina vulnerable: Windows 7 SP1 o Windows Server 2008 sin el parche MS17-010.](https://drive.google.com/file/d/11f_wsW59Dh1fGvQCNUPK70lIWzlcg44_/view)
 -	🌐 Ambas máquinas deben estar en la misma red local o virtual interna.
 ________________________________________
 ## 🧪 Paso a paso para explotar MS17-010 con Metasploit
@@ -87,7 +87,7 @@ ________________________________________
 ________________________________________
 ## ❌ **Consejos adicionales**
 
-- Para verificar si el Windows 7 es vulnerable: ```bash nmap -p 445 --script smb-vuln-ms08-067 [IP_víctima] ```
+- Para verificar si el Windows 7 es vulnerable: ```bash nmap -p 445 --script smb-vuln-ms08-010 [IP_víctima] ```
 - Si el Exploit dice "No session created"	Verifica que la víctima sea vulnerable (sin parche KB4012212 o similar)
 - LHOST mal configurado	Usa la IP correcta de tu Kali, no 127.0.0.1 ni una IP de otra red
 - Antivirus bloquea el payload	Desactívalo (solo en laboratorio)
