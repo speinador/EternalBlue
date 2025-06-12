@@ -97,3 +97,18 @@ ________________________________________
 - [Rapid7 Metasploit Docs](https://www.rapid7.com/blog/post/2017/05/20/metasploit-the-power-of-the-community-and-eternalblue/)
 -	[Hack The Box](https://www.hackthebox.com/machines/blue)
 - [TryHackMe](https://tryhackme.com/room/blue)
+
+________________________________________
+## 🧑‍🏫 Autor
+
+Explicación elaborada por [Sebastian Peinador](https://www.linkedin.com/in/sebastian-j-peinador/) para propósitos didácticos y de investigación en ciberseguridad ofensiva.
+
+________________________________________
+
+## 📄 Licencia
+
+Este material se distribuye bajo la licencia [MIT](LICENSE).
+
+________________________________________
+
+> Si te resulta útil, ¡no olvides darle ⭐ al repo o compartirlo!
